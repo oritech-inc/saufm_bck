@@ -1,0 +1,235 @@
+/**
+* Template Name: saufm - v1.0.0
+* Template URL: https://saufm.co.za/assets/app.css
+* License: http://freshmarksystems.co,za
+*/
+
+/*--------------------------------------------------------------
+#0 General
+--------------------------------------------------------------*/
+
+:root{
+    --crl-primary-green:#97Ca54;
+    --crl-primary-green-50: rgba(151, 202, 84, 0.5);
+    --crl-primary-yellow:#f8dd50;
+    --crl-primary-orange:#f8921D;
+    --crl-primary-dark: #000000;
+    --crl-primary-light: #ffffff;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: var(--crl-primary-dark);
+    width: 100%;
+    height: 100%;
+}
+
+
+body{
+    background: url("./../img/bg/app.jpg") no-repeat fixed center;
+    background-size: cover;
+    color: var(--crl-primary-light);
+    overflow-y: scroll;
+}
+
+main,section{
+    scroll-snap-align: center;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+#1 Preloader
+--------------------------------------------------------------*/
+.spinner-container {
+    justify-content:stretch;
+    align-items:center;
+    text-align: center;
+    background: var(--clr-primary-dark);
+    opacity: 0.9;
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    z-index: 5000!important;
+}
+
+.spinner-container > div {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.spinner {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(90deg, var(--crl-primary-orange), var(--crl-primary-green));
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#preloader {
+    position: relative;
+    animation: deform .8s ease-in-out infinite;
+}
+
+@keyframes deform {
+    0% {
+        border-radius: 25%;
+        transform: rotate(0deg) scale(1);
+        background: linear-gradient(90deg, var(--crl-primary-green), var(--crl-primary-orange));
+    }
+    50% {
+        border-radius: 100%;
+        transform: rotate(180deg) scale(0.6);
+        background: linear-gradient(90deg, var(--crl-primary-orange), var(--crl-primary-yellow));
+    }
+    100% {
+        border-radius: 25%;
+        transform: rotate(360deg) scale(1.2);
+        background: linear-gradient(90deg, var(--crl-primary-yellow), var(--crl-primary-green));
+    }
+}
+
+/*--------------------------------------------------------------
+#2 Navbar
+--------------------------------------------------------------*/
+header#nav button{
+    /*background-color: var(--color-orange) !important;*/
+    /*border: var(--color-orange);*/
+    border-color: var(--color-orange)!important;
+    border-bottom-width: 4px;
+    border-style: solid;
+    color: var(--color-orange)!important;
+    transition: all 200ms ease-in-out;
+}
+
+header#nav a.nav-link {
+    color: var(--color-orange)!important;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    background:var(--color-orange)!important;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    border-bottom: 2px solid transparent!important;
+}
+
+header#nav a.nav-link:hover, #nav a.nav-link:focus {
+    background-color: var(--color-orange)!important;
+    color: var(--color-green)!important;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-green)!important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    background-color: var(--color-orange)!important;
+}
+
+#nav button:hover{
+    background-color: var(--color-orange) !important;
+    border: 1px solid var(--color-orange);
+    color: var(--color-light);
+    transform: translateY(0.1rem);
+}
+
+
+/*--------------------------------------------------------------
+#3 Header
+--------------------------------------------------------------*/
+header{
+    /*background-color: var(--color-light);*/
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#welcome{
+    background: var(--crl-primary-orange);
+    color: var(--crl-primary-light);
+    height: 100%;
+}
+
+.hr-welcome {
+    padding-top: .5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.hr-line{
+    width: 60%;
+    position: relative;
+    margin: 15px;
+    border-bottom: 2px solid var(--crl-primary-light);
+}
+
+.hr-welcome i{
+    font-size: 2.5rem;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--crl-primary-green);
+    color: var(--crl-primary-light);
+    /*opacity: 0.5;*/
+    overflow-x: hidden;
+}
+
+footer .row{
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    /*visibility: hidden;*/
+    opacity: 0;
+    right: 2rem;
+    bottom: 1.5rem;
+    z-index: 996;
+    background: var(--crl-primary-orange);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    transition: all 0.5s;
+}
+
+.back-to-top i {
+    font-size: 1.3rem;
+    color: var(--crl-primary-yellow);
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: var(--crl-primary-green);
+    color: var(--crl-primary-light);
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

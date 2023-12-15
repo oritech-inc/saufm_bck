@@ -1,0 +1,142 @@
+:root{
+    --primary-orange: rgba(248, 146, 29, 0.6);
+    --primary-green: rgba(150, 202, 85, 0.65);
+    --primary-yellow:#F8DC51;
+    --primary-dark: rgba(43, 45, 41, 0.6);
+    --primary-light: rgba(254, 254, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url("./../img/bg/app.jpg") no-repeat fixed center;
+    background-size: cover;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* Navbar*/
+
+#nav button{
+    /*background-color: var(--primary-orange) !important;*/
+    /*border: var(--primary-orange);*/
+    border-color: var(--primary-orange);
+    border-bottom-width: 4px;
+    border-style: solid;
+    color: var(--primary-orange);
+    transition: all 200ms ease-in-out;
+}
+
+#nav a.nav-link {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    margin-right: 1rem;
+    border-bottom:var(--primary-light)!important;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    border-bottom: 2px solid transparent!important;
+}
+
+#nav a.nav-link:hover, #nav a.nav-link:focus {
+    color: var(--primary-green);
+    text-transform: uppercase;
+    margin-right: 1rem;
+    border-bottom: 2px solid var(--primary-green)!important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--primary-light)!important;
+    background-color: var(--primary-green)!important;
+}
+
+#nav button:hover{
+    background-color: var(--primary-green) !important;
+    border: 1px solid var(--primary-orange);
+    color: var(--primary-light);
+    transform: translateY(0.1rem);
+}
+
+/* Welcome */
+#header-content{
+    background: var(--primary-dark);
+}
+
+#header-content #slider .carousel-inner{
+    height: 60dvh !important;
+}
+
+#welcome-content{
+    background: var(--primary-orange);
+    color: var(--primary-light);
+    height: 50dvh;
+}
+
+.hr-welcome {
+    padding-top: .5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.hr-line{
+    width: 60%;
+    position: relative;
+    margin: 15px;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.hr-welcome i{
+    font-size: 2.5rem;
+}
+
+/* Story */
+#story-content{
+    background: var(--primary-dark);
+    color: var(--primary-light);
+    /*height: \;*/
+}
+
+/* Values */
+#values-content{
+    background: var(--primary-green);
+    color: var(--primary-light);
+    /*height: \;*/
+}
+
+#values .card-title{
+    color: var(--primary-dark);
+}
+
+#values span{
+    background-color: var(--primary-yellow);
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+#values span i{
+    font-size: 2rem;
+    color: var(--primary-dark);
+}
+
+/* Values */
+#counter-content{
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    /*height: \;*/
+}
+
+#counter .col-md-4{
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary-dark);
+}
